@@ -1,11 +1,11 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 import org.apache.batik.svggen.SVGGraphics2D;
 
 import java.awt.*;
 import java.util.Arrays;
 
-import static math.simulation.random_simplicial_complex.SVGGenerator.*;
+import static math.simulation.common.SVGGenerator.*;
 
 public class PoissonPointProcessSVG extends PoissonPointProcess {
 

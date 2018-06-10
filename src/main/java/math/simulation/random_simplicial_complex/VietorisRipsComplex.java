@@ -1,5 +1,7 @@
 package math.simulation.random_simplicial_complex;
 
+import math.simulation.common.DimensionErrorException;
+import math.simulation.common.EuclideanSpace;
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
 import java.io.*;
@@ -9,10 +11,25 @@ import java.util.*;
  * calculates the Vietoris Rips Complex with distance delta out of PoissonPointProcess
  * WARNING: THE GENERATION ALGORYTHM SEEMS TO HAVE A HYPEREXPONENTIAL COMPUTATION TIME IN THE NUMBER OF GIVEN POINTS
  *
+ * @TODO: reduce calculation time by orders of magnitude!!!
+ *
+ * divide the index set of points into subsets of indizies such that the subsets represent all points in an certain area
+ * ex; cubes with width == distance parameter
+ * calculate the connected component of the cubes where two cubes are connected if there is an edge from a point in the first cube to the second cube
+ *
+ * do the simplex calculation by iterating over all cubes and first check all possible combinations of points in the cube,
+ * if the cube as outgoing connections check the connected cubes also!
+ *
+ * build the model from the origin in the coordinate system and iterate over all cubes by using cantor diagonalisation!
+ *
+ *
  * @TODO Optimization:
  * Try to form Higher Dimensional Simplicies Only with Other Facets of Same Dimension that are laying in a small neighbourhood.
  * @TODO alternative Algo:
  * Iterate directly over all possible sets of points and check the distances for all k choose 2.
+ *
+ * @TODO fck java, rewrite this programm in proper C++ or C# with vector calculations on CUDA CORES!
+ *
  */
 public class VietorisRipsComplex extends GeometricSimplicialComplexAbstract {
 
@@ -71,6 +88,13 @@ public class VietorisRipsComplex extends GeometricSimplicialComplexAbstract {
 
     @Override
     public void generate() throws DimensionErrorException {
+        simplicies.clear();
+        generateAdjacencyMatrix();
+
+
+    }
+
+    public void generate_optimized() throws DimensionErrorException {
         simplicies.clear();
         generateAdjacencyMatrix();
 

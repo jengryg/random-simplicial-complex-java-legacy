@@ -1,4 +1,4 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 /**
  * DimensionErrorExceptions is thrown iff the dimension of two represented vectors or points is not equal

@@ -1,6 +1,8 @@
 package math.simulation.random_simplicial_complex;
 
 
+import math.simulation.common.SaveFileAbstract;
+
 public class Simulation {
 
     public static void main(String[] args) throws Exception {
@@ -16,8 +18,6 @@ public class Simulation {
     }
 
     public static void simulation() throws Exception {
-        //SimulationExamples.generationOfPoissonPointProcess();
-        //SimulationExamples.intensityIncreasingPoissonPointProcess();
         //SimulationExamples.theGiantBeast();
         //SimulationExamples.theLonelyComplex();
         //SimulationExamples.randomizedFullVietorisRipsComplex();
@@ -27,5 +27,6 @@ public class Simulation {
         //SimulationExamples.onlyOneFilledTriangle();
         //SimulationExamples.searchForTriangles();
         //SimulationExamples.thankYouComplex();
+
     }
 }

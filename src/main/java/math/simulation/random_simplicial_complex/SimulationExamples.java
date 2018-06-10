@@ -1,15 +1,17 @@
 package math.simulation.random_simplicial_complex;
 
+import math.simulation.common.PoissonPointProcess;
+import math.simulation.common.PoissonPointProcessSVG;
+import math.simulation.common.SaveFileAbstract;
 import org.apache.batik.svggen.SVGGraphics2D;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static math.simulation.random_simplicial_complex.SVGGenerator.drawContainerBox;
-import static math.simulation.random_simplicial_complex.SVGGenerator.getSVGGraphics2D;
-import static math.simulation.random_simplicial_complex.SVGGenerator.saveSVGGraphics2D;
+import static math.simulation.common.SVGGenerator.drawContainerBox;
+import static math.simulation.common.SVGGenerator.getSVGGraphics2D;
+import static math.simulation.common.SVGGenerator.saveSVGGraphics2D;
 
 public class SimulationExamples {
 
@@ -295,30 +297,7 @@ public class SimulationExamples {
         System.out.println(String.format("componentCount=%d", vietorisRipsComplexSVG.getComponentCount()));
     }
 
-    public static void generationOfPoissonPointProcess() throws Exception {
-        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG(new int[]{8, 6}, 1);
-        poissonPointProcessSVG.generate();
-        poissonPointProcessSVG.save();
-        poissonPointProcessSVG.svgStepConstruction();
-    }
 
-    public static void intensityIncreasingPoissonPointProcess() throws Exception {
-
-        double[] intensities = new double[]{2.0, 4.0, 8.0, 16.0, 32.0, 0.5, 0.1};
-
-        String nameBase = SaveFileAbstract.generateNameBase();
-
-        PoissonPointProcessSVG[] poissonPointProcessSVG = new PoissonPointProcessSVG[intensities.length];
-
-        for (int i = 0; i < poissonPointProcessSVG.length; i++) {
-            SaveFileAbstract.setSaveCode(String.format("%s-%f", nameBase, intensities[i]));
-
-            poissonPointProcessSVG[i] = new PoissonPointProcessSVG(new int[]{8, 6}, intensities[i]);
-            poissonPointProcessSVG[i].generate();
-            poissonPointProcessSVG[i].save();
-            poissonPointProcessSVG[i].svgStepConstruction();
-        }
-    }
 
     public static void randomizedFullVietorisRipsComplex() throws Exception {
         PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-22-09-23");

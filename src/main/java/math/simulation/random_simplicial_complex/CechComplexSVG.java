@@ -3,12 +3,11 @@ package math.simulation.random_simplicial_complex;
 import org.apache.batik.svggen.SVGGraphics2D;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
-import static math.simulation.random_simplicial_complex.SVGGenerator.*;
-import static math.simulation.random_simplicial_complex.SVGGenerator.TRANSPARENT;
-import static math.simulation.random_simplicial_complex.SVGGenerator.drawSimplex;
+import static math.simulation.common.SVGGenerator.*;
+import static math.simulation.common.SVGGenerator.TRANSPARENT;
+import static math.simulation.common.SVGGenerator.drawSimplex;
 
 public class CechComplexSVG extends CechComplex {
 

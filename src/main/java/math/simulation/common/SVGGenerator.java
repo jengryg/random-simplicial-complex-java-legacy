@@ -1,4 +1,4 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 import org.apache.batik.dom.GenericDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;

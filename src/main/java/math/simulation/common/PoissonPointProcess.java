@@ -1,4 +1,4 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 import org.apache.commons.math3.distribution.PoissonDistribution;
 import org.apache.commons.math3.distribution.UniformRealDistribution;
@@ -57,6 +57,8 @@ public class PoissonPointProcess extends SaveFileAbstract {
             throw new DimensionErrorException();
         }
     }
+
+
 
     public void generate() {
         PoissonDistribution poissonDistribution = new PoissonDistribution(intensity);

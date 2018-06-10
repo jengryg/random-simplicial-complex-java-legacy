@@ -1,4 +1,4 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 public class EuclideanSpace {
     public static double distance(double[] x, double[] y) throws DimensionErrorException {

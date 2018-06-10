@@ -3,10 +3,9 @@ package math.simulation.random_simplicial_complex;
 import org.apache.batik.svggen.SVGGraphics2D;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
-import static math.simulation.random_simplicial_complex.SVGGenerator.*;
+import static math.simulation.common.SVGGenerator.*;
 
 public class VietorisRipsComplexSVG extends VietorisRipsComplex {
 

@@ -1,5 +1,8 @@
 package math.simulation.random_simplicial_complex;
 
+import math.simulation.common.DimensionErrorException;
+import math.simulation.common.SaveFileAbstract;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;

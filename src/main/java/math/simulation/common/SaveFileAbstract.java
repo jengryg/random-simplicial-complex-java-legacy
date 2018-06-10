@@ -1,4 +1,4 @@
-package math.simulation.random_simplicial_complex;
+package math.simulation.common;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
