@@ -29,7 +29,7 @@ public class ConvexHullSVG extends ConvexHull {
     public void drawPoints(SVGGraphics2D aSVGGraphics2D, Color aColor) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < points.size(); i++) {
-            drawCircle(aSVGGraphics2D, points.get(i), 0.05);
+            drawFilledCircle(aSVGGraphics2D, points.get(i), 0.05);
         }
     }
 
@@ -40,7 +40,7 @@ public class ConvexHullSVG extends ConvexHull {
     public void drawHullPoints(SVGGraphics2D aSVGGraphics2D, Color aColor) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < pointsHull.size(); i++) {
-            drawCircle(aSVGGraphics2D, pointsHull.get(i), 0.05);
+            drawFilledCircle(aSVGGraphics2D, pointsHull.get(i), 0.05);
         }
     }
 

@@ -103,7 +103,7 @@ public class PoissonPointProcessSVG extends PoissonPointProcess {
     public void drawPoints(SVGGraphics2D aSVGGraphics2D, Color aColor) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < points.size(); i++) {
-            drawCircle(aSVGGraphics2D, points.get(i), 0.03);
+            drawFilledCircle(aSVGGraphics2D, points.get(i), 0.03);
         }
     }
 

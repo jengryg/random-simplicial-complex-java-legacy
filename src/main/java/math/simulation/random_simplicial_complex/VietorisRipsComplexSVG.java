@@ -129,7 +129,7 @@ public class VietorisRipsComplexSVG extends VietorisRipsComplex {
     public void drawPoints(SVGGraphics2D aSVGGraphics2D, Color aColor) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < vertices.size(); i++) {
-            drawCircle(aSVGGraphics2D, vertices.get(i), 0.05);
+            drawFilledCircle(aSVGGraphics2D, vertices.get(i), 0.05);
         }
     }
 
@@ -168,7 +168,7 @@ public class VietorisRipsComplexSVG extends VietorisRipsComplex {
     public void drawCircles(SVGGraphics2D aSVGGraphics2D, Color aColor) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < vertices.size(); i++) {
-            drawCircle(aSVGGraphics2D, vertices.get(i), distance / 2);
+            drawFilledCircle(aSVGGraphics2D, vertices.get(i), distance / 2);
         }
     }
 

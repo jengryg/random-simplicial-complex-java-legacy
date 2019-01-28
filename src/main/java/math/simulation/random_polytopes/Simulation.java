@@ -17,7 +17,7 @@ public class Simulation {
     }
 
     public static void simulation() throws Exception {
-        //SimulationExamples.convexHullEasyExample();
+        SimulationExamples.randomPolytopeInBall();
 
     }
 }

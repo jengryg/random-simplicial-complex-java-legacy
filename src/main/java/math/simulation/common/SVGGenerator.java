@@ -57,8 +57,12 @@ public class SVGGenerator {
         return (int) Math.round(x * 100);
     }
 
-    public static void drawCircle(SVGGraphics2D aSVGGraphics2D, double[] aCenter, double aRadius) {
+    public static void drawFilledCircle(SVGGraphics2D aSVGGraphics2D, double[] aCenter, double aRadius) {
         aSVGGraphics2D.fillOval(convertCord(aCenter[0] - aRadius), convertCord(aCenter[1] - aRadius), convertCord(2 * aRadius), convertCord(2 * aRadius));
+    }
+
+    public static void drawCircle(SVGGraphics2D aSVGGraphics2D, double[] aCenter, double aRadius) {
+        aSVGGraphics2D.drawOval(convertCord(aCenter[0] - aRadius), convertCord(aCenter[1] - aRadius), convertCord(2 * aRadius), convertCord(2 * aRadius));
     }
 
     public static void drawSimplex(SVGGraphics2D aSVGGraphics2D, ArrayList<double[]> vertices) {
