@@ -7,7 +7,7 @@ import java.util.List;
 
 import static math.simulation.common.SVGGenerator.*;
 import static math.simulation.common.SVGGenerator.TRANSPARENT;
-import static math.simulation.common.SVGGenerator.drawSimplex;
+import static math.simulation.common.SVGGenerator.drawFilledSimplex;
 
 public class CechComplexSVG extends CechComplex {
 
@@ -124,7 +124,7 @@ public class CechComplexSVG extends CechComplex {
     public void drawSimplicesOfDimension(SVGGraphics2D aSVGGraphics2D, Color aColor, int dimension) {
         aSVGGraphics2D.setColor(aColor);
         for (int i = 0; i < simplicies.get(dimension).size(); i++) {
-            drawSimplex(aSVGGraphics2D, mapSimplexToGeometry(simplicies.get(dimension).get(i)));
+            drawFilledSimplex(aSVGGraphics2D, mapSimplexToGeometry(simplicies.get(dimension).get(i)));
         }
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 import static math.simulation.common.SVGGenerator.*;
 import static math.simulation.common.SVGGenerator.TRANSPARENT;
-import static math.simulation.common.SVGGenerator.drawSimplex;
+import static math.simulation.common.SVGGenerator.drawFilledSimplex;
 
 public class ConvexHullSVG extends ConvexHull {
     public ConvexHullSVG(List<double[]> aPoints) {

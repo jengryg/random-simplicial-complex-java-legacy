@@ -107,6 +107,17 @@ public class PoissonPointProcessSVG extends PoissonPointProcess {
         }
     }
 
+    public void drawRestrictedPoints(SVGGraphics2D aSVGGraphics2D) {
+        drawPoints(aSVGGraphics2D, TRANSPARENT);
+    }
+
+    public void drawRestrictedPoints(SVGGraphics2D aSVGGraphics2D, Color aColor) {
+        aSVGGraphics2D.setColor(aColor);
+        for (int i = 0; i < restrictedPoints.size(); i++) {
+            drawFilledCircle(aSVGGraphics2D, restrictedPoints.get(i), 0.03);
+        }
+    }
+
     public void writePointNumbers(SVGGraphics2D aSVGGraphics2D) {
         writePointNumbers(aSVGGraphics2D, TRANSPARENT);
     }

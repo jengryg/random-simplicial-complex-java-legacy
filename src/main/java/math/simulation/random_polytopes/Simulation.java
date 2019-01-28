@@ -17,7 +17,6 @@ public class Simulation {
     }
 
     public static void simulation() throws Exception {
-        SimulationExamples.randomPolytopeInBall();
-
+        SimulationExamples.randomPolytopeInBallIntensitySimulation();
     }
 }

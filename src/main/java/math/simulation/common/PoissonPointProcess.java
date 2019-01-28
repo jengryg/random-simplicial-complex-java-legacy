@@ -18,7 +18,11 @@ public class PoissonPointProcess extends SaveFileAbstract {
     protected int[] lengths;
     protected double intensity;
     protected List<double[]> points = new ArrayList<>();
+    protected List<double[]> restrictedPoints = new ArrayList<>();
+
     protected HashMap<String, Integer> poissonNumbers = new HashMap<>();
+
+    RestrictionAbstract restriction = new NoRestriction();
 
     public int[] getLengths() {
         return lengths;
@@ -30,6 +34,14 @@ public class PoissonPointProcess extends SaveFileAbstract {
 
     public List<double[]> getPoints() {
         return points;
+    }
+
+    public List<double[]> getRestrictedPoints() {
+        return restrictedPoints;
+    }
+
+    public RestrictionAbstract getRestriction() {
+        return restriction;
     }
 
     public HashMap<String, Integer> getPoissonNumbers() {
@@ -79,6 +91,7 @@ public class PoissonPointProcess extends SaveFileAbstract {
                     point[d] = uniformRealDistribution.sample() + block[d];
                 }
                 this.points.add(point);
+                this.restrictedPoints.add(point);
                 numberOfPoints--;
             }
             // generating end
@@ -88,6 +101,16 @@ public class PoissonPointProcess extends SaveFileAbstract {
                     break;
                 }
                 block[j] = 0;
+            }
+        }
+    }
+
+    public void restrictTo(RestrictionAbstract aRestriction) throws DimensionErrorException {
+        restriction = aRestriction;
+        restrictedPoints.clear();
+        for( double[] p : points) {
+            if( restriction.isContained(p)) {
+                restrictedPoints.add(p);
             }
         }
     }

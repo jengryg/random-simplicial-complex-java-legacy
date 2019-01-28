@@ -65,7 +65,7 @@ public class SVGGenerator {
         aSVGGraphics2D.drawOval(convertCord(aCenter[0] - aRadius), convertCord(aCenter[1] - aRadius), convertCord(2 * aRadius), convertCord(2 * aRadius));
     }
 
-    public static void drawSimplex(SVGGraphics2D aSVGGraphics2D, ArrayList<double[]> vertices) {
+    public static void drawFilledSimplex(SVGGraphics2D aSVGGraphics2D, ArrayList<double[]> vertices) {
 
         int[] xPoints = new int[vertices.size()];
         int[] yPoints = new int[vertices.size()];
@@ -79,6 +79,23 @@ public class SVGGenerator {
             aSVGGraphics2D.drawLine(xPoints[0], yPoints[0], xPoints[1], yPoints[1]);
         } else if (xPoints.length >= 3) {
             aSVGGraphics2D.fillPolygon(xPoints, yPoints, xPoints.length);
+        }
+    }
+
+    public static void drawSimplex(SVGGraphics2D aSVGGraphics2D, ArrayList<double[]> vertices) {
+
+        int[] xPoints = new int[vertices.size()];
+        int[] yPoints = new int[vertices.size()];
+
+        for (int i = 0; i < vertices.size(); i++) {
+            xPoints[i] = convertCord(vertices.get(i)[0]);
+            yPoints[i] = convertCord(vertices.get(i)[1]);
+        }
+
+        if (xPoints.length == 2) {
+            aSVGGraphics2D.drawLine(xPoints[0], yPoints[0], xPoints[1], yPoints[1]);
+        } else if (xPoints.length >= 3) {
+            aSVGGraphics2D.drawPolygon(xPoints, yPoints, xPoints.length);
         }
     }
 

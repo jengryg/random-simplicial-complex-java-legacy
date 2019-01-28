@@ -116,7 +116,7 @@ public class VietorisRipsComplexSVG extends VietorisRipsComplex {
         if( componentSimplicies.size() > componentId) {
             if( componentSimplicies.get(componentId).size() > dimension) {
                 for (int i = 0; i < componentSimplicies.get(componentId).get(dimension).size(); i++) {
-                    drawSimplex(aSVGGraphics2D, mapSimplexToGeometry(componentSimplicies.get(componentId).get(dimension).get(i)));
+                    drawFilledSimplex(aSVGGraphics2D, mapSimplexToGeometry(componentSimplicies.get(componentId).get(dimension).get(i)));
                 }
             }
         }
@@ -180,7 +180,7 @@ public class VietorisRipsComplexSVG extends VietorisRipsComplex {
         aSVGGraphics2D.setColor(aColor);
         if(simplicies.size() > dimension) {
             for (int i = 0; i < simplicies.get(dimension).size(); i++) {
-                drawSimplex(aSVGGraphics2D, mapSimplexToGeometry(simplicies.get(dimension).get(i)));
+                drawFilledSimplex(aSVGGraphics2D, mapSimplexToGeometry(simplicies.get(dimension).get(i)));
             }
         }
 
