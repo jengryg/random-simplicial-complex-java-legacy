@@ -65,11 +65,27 @@ public class ConvexHull extends SaveFileAbstract {
         generateGrahamScan();
     }
 
+    public void generateGrahamScan() {
+
+        Point2DGraham[] pArray = new Point2DGraham[points.size()];
+
+        for (int i = 0; i < points.size(); i++) {
+            pArray[i] = new Point2DGraham(points.get(i)[0], points.get(i)[1]);
+        }
+
+        GrahamScan grahamScan = new GrahamScan(pArray);
+
+        pointsHull.clear();
+        for (Point2DGraham p : grahamScan.hull()) {
+            pointsHull.add(new double[]{p.x(), p.y()});
+        }
+    }
+
     /**
      * GrahamScan
      */
 
-    public void generateGrahamScan() throws IllegalAccessException {
+    public void generateGrahamScanOld() throws IllegalAccessException {
         List<double[]> sortedPoints = new ArrayList<>(getSortedPointSet());
 
         if (sortedPoints.size() == 0) {
