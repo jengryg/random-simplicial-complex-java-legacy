@@ -1,6 +1,5 @@
 package math.simulation.random_polytopes;
 
-import math.simulation.common.BallRestriction;
 import math.simulation.common.BallRestrictionSVG;
 import math.simulation.common.PoissonPointProcessSVG;
 import math.simulation.common.SaveFileAbstract;
@@ -10,7 +9,8 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static math.simulation.common.SVGGenerator.*;
+import static math.simulation.common.SVGGenerator.getSVGGraphics2D;
+import static math.simulation.common.SVGGenerator.saveSVGGraphics2D;
 
 public class SimulationExamples {
 

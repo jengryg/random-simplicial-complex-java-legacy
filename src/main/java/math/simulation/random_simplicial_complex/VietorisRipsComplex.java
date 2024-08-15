@@ -4,8 +4,11 @@ import math.simulation.common.DimensionErrorException;
 import math.simulation.common.EuclideanSpace;
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * calculates the Vietoris Rips Complex with distance delta out of PoissonPointProcess

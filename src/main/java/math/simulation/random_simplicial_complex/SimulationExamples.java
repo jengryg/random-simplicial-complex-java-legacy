@@ -9,9 +9,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static math.simulation.common.SVGGenerator.drawContainerBox;
-import static math.simulation.common.SVGGenerator.getSVGGraphics2D;
-import static math.simulation.common.SVGGenerator.saveSVGGraphics2D;
+import static math.simulation.common.SVGGenerator.*;
 
 public class SimulationExamples {
 

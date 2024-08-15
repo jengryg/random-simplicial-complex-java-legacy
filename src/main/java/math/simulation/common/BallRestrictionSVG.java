@@ -4,7 +4,7 @@ import org.apache.batik.svggen.SVGGraphics2D;
 
 import java.awt.*;
 
-import static math.simulation.common.SVGGenerator.*;
+import static math.simulation.common.SVGGenerator.drawCircle;
 
 public class BallRestrictionSVG extends BallRestriction {
 

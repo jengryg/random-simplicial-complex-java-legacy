@@ -6,8 +6,6 @@ import java.awt.*;
 import java.util.List;
 
 import static math.simulation.common.SVGGenerator.*;
-import static math.simulation.common.SVGGenerator.TRANSPARENT;
-import static math.simulation.common.SVGGenerator.drawFilledSimplex;
 
 public class CechComplexSVG extends CechComplex {
 

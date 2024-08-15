@@ -18,15 +18,14 @@ public class Simulation {
     }
 
     public static void simulation() throws Exception {
-        //SimulationExamples.theGiantBeast();
-        //SimulationExamples.theLonelyComplex();
-        //SimulationExamples.randomizedFullVietorisRipsComplex();
-        //SimulationExamples.onlyOnePointComplex();
-        //SimulationExamples.onlyOneEdgeComplex();
-        //SimulationExamples.onlyOneEdgeAndAPointComplex();
-        //SimulationExamples.onlyOneFilledTriangle();
-        //SimulationExamples.searchForTriangles();
-        //SimulationExamples.thankYouComplex();
-
+        SimulationExamples.theGiantBeast();
+//        SimulationExamples.theLonelyComplex();
+//        SimulationExamples.randomizedFullVietorisRipsComplex();
+//        SimulationExamples.onlyOnePointComplex();
+//        SimulationExamples.onlyOneEdgeComplex();
+//        SimulationExamples.onlyOneEdgeAndAPointComplex();
+//        SimulationExamples.onlyOneFilledTriangle();
+//        SimulationExamples.searchForTriangles();
+//        SimulationExamples.thankYouComplex();
     }
 }
