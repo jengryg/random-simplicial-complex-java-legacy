@@ -17,6 +17,9 @@ public class Simulation {
 
     }
 
+    // NOTE: 2024-08-15 code was adjusted and model data from 2017-11-28 was added to repository to make these
+    // simulations runnable again.
+
     public static void simulation() throws Exception {
 //        SimulationExamples.theGiantBeast();
 //        SimulationExamples.theLonelyComplex();
