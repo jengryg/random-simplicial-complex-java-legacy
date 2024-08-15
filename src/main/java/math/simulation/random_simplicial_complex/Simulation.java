@@ -18,9 +18,8 @@ public class Simulation {
     }
 
     public static void simulation() throws Exception {
-        SimulationExamples.theGiantBeast();
+//        SimulationExamples.theGiantBeast();
 //        SimulationExamples.theLonelyComplex();
-//        SimulationExamples.randomizedFullVietorisRipsComplex();
 //        SimulationExamples.onlyOnePointComplex();
 //        SimulationExamples.onlyOneEdgeComplex();
 //        SimulationExamples.onlyOneEdgeAndAPointComplex();

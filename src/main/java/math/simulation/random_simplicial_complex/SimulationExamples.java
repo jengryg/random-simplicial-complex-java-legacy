@@ -295,20 +295,6 @@ public class SimulationExamples {
         System.out.println(String.format("componentCount=%d", vietorisRipsComplexSVG.getComponentCount()));
     }
 
-
-
-    public static void randomizedFullVietorisRipsComplex() throws Exception {
-        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-22-09-23");
-        poissonPointProcessSVG.save();
-
-        VietorisRipsComplexSVG vietorisRipsComplexSVG = new VietorisRipsComplexSVG(poissonPointProcessSVG.getPoints(), 1);
-        vietorisRipsComplexSVG.generate();
-        vietorisRipsComplexSVG.printAdjacencyMatrix();
-        vietorisRipsComplexSVG.save();
-        vietorisRipsComplexSVG.svgStepConstruction();
-
-    }
-
     public static void onlyOnePointComplex() throws Exception {
         SaveFileAbstract.setSaveCode("ABSTRACT_EXAMPLES_0");
         List<List<int[]>> simplices = new ArrayList<>();
