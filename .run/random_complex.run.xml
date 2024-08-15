@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="random_complex" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="math.simulation.random_simplicial_complex.Simulation" />
+    <module name="random-simplicial-complex" />
+    <method v="2">
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="package" />
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
