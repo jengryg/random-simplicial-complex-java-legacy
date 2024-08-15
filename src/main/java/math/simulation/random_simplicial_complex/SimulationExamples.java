@@ -14,7 +14,7 @@ import static math.simulation.common.SVGGenerator.*;
 public class SimulationExamples {
 
     public static void theLonelyComplex() throws Exception {
-        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-00-24-58");
+        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-00-24-58/2017-11-28-00-24-58");
         poissonPointProcessSVG.printPoints();
 
         VietorisRipsComplexSVG vietorisRipsComplexSVG = new VietorisRipsComplexSVG(poissonPointProcessSVG.getPoints(), 0.999 * 0.9 * PoissonPointProcess.PERCOLATION);
@@ -90,11 +90,11 @@ public class SimulationExamples {
     }
 
     public static void searchForTriangles() throws Exception {
-        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-00-24-58");
+        PoissonPointProcessSVG poissonPointProcessSVG = new PoissonPointProcessSVG("2017-11-28-00-24-58/2017-11-28-00-24-58");
         poissonPointProcessSVG.printPoints();
         poissonPointProcessSVG.save();
 
-        VietorisRipsComplexSVG vietorisRipsComplexSVG = new VietorisRipsComplexSVG("2017-11-28-00-24-58");
+        VietorisRipsComplexSVG vietorisRipsComplexSVG = new VietorisRipsComplexSVG("2017-11-28-00-24-58/2017-11-28-00-24-58");
 
         vietorisRipsComplexSVG.generateOneSkeleton();
         vietorisRipsComplexSVG.printSimplicies();
